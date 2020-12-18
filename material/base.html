@@ -27,7 +27,7 @@
         <meta name="author" content="{{ config.site_author }}">
       {% endif %}
       <link rel="shortcut icon" href="{{ config.theme.favicon | url }}">
-      <meta name="generator" content="mkdocs-{{ mkdocs_version }}, mkdocs-material-6.1.7">
+      <meta name="generator" content="mkdocs-{{ mkdocs_version }}, mkdocs-material-test-6.1.7">
     {% endblock %}
     {% block htmltitle %}
       {% if page and page.meta and page.meta.title %}
@@ -39,10 +39,10 @@
       {% endif %}
     {% endblock %}
     {% block styles %}
-      <link rel="stylesheet" href="{{ 'assets/stylesheets/main.19753c6b.min.css' | url }}">
+      <link rel="stylesheet" href="{{ 'assets/stylesheets/main.css' | url }}">
       {% if config.theme.palette %}
         {% set palette = config.theme.palette %}
-        <link rel="stylesheet" href="{{ 'assets/stylesheets/palette.196e0c26.min.css' | url }}">
+        <link rel="stylesheet" href="{{ 'assets/stylesheets/palette.css' | url }}">
         {% if palette.primary %}
           {% import "partials/palette.html" as map %}
           {% set primary = map.primary(
@@ -177,8 +177,8 @@
       {% endblock %}
     </div>
     {% block scripts %}
-      <script src="{{ 'assets/javascripts/vendor.0ac82a11.min.js' | url }}"></script>
-      <script src="{{ 'assets/javascripts/bundle.f81dfb4d.min.js' | url }}"></script>
+      <script src="{{ 'assets/javascripts/vendor.js' | url }}"></script>
+      <script src="{{ 'assets/javascripts/bundle.js' | url }}"></script>
       {%- set translations = {} -%}
       {%- for key in [
         "clipboard.copy",
@@ -206,13 +206,13 @@
           base: "{{ base_url }}",
           features: {{ config.theme.features or [] | tojson }},
           search: Object.assign({
-            worker: "{{ 'assets/javascripts/worker/search.4ac00218.min.js' | url }}"
+            worker: "{{ 'assets/javascripts/worker/search.js' | url }}"
           }, typeof search !== "undefined" && search)
         })
       </script>
       {% for path in config["extra_javascript"] %}
         <script src="{{ path | url }}"></script>
       {% endfor %}
+      <script src="assets/javascripts/utilities/hljs/highlight.pack.js"><script src="assets/javascripts/utilities/hljs/extra.js">
     {% endblock %}
-  </body>
-</html>
+  </body></html>

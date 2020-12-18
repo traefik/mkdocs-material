@@ -81,8 +81,6 @@ import {
   setupKeyboard,
   setupInstantLoading,
   setupSearchWorker,
-  SearchIndex,
-  SearchIndexPipeline
 } from "integrations"
 import {
   patchCodeBlocks,
