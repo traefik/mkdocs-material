@@ -42,4 +42,4 @@ venv
 # IDEs
 .vscode
 
-mkdocs_material_test.egg-info/
+*.egg-info/

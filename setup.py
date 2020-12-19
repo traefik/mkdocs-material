@@ -38,7 +38,7 @@ with open("README.md", encoding = "utf-8") as data:
 
 # Package description
 setup(
-    name = "mkdocs-material-test",
+    name = "mkdocs-traefik-labs",
     version = package["version"],
     url = package["homepage"],
     license = package["license"],
@@ -63,7 +63,7 @@ setup(
     install_requires = install_requires,
     entry_points = {
         "mkdocs.themes": [
-            "material-test = material",
+            "traefik-labs = material",
         ]
     },
     zip_safe = False
