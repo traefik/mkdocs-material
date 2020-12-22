@@ -104,15 +104,6 @@
         </a>
       {% endif %}
     </div>
-    <div data-md-component="announce">
-      {% if self.announce() %}
-        <aside class="md-announce">
-          <div class="md-announce__inner md-grid md-typeset">
-            {% block announce %}{% endblock %}
-          </div>
-        </aside>
-      {% endif %}
-    </div>
     {% block header %}
       {% include "partials/company-header.html" %}
       {% include "partials/header.html" %}
@@ -128,7 +119,12 @@
         <div class="md-main__inner md-grid">
           {% block site_nav %}
             {% if nav %}
+              {% include "partials/product-switcher.html" %}
               <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                {% include "partials/search.html" %}
+                {% if "search" in config["plugins"] %}
+                    <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+                {% endif %}
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     {% include "partials/nav.html" %}

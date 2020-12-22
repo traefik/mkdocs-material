@@ -7,6 +7,9 @@
   <header class="site-header">
     <div class="wrapper-1200">
       <div class="left">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer">
+          {% include ".icons/material/menu" ~ ".svg" %}
+        </label>
         <div class="site-header__main">
           <a href="/">
             <img class="site-header__logo" alt="Load Balancer + Kubernetes Ingress + Service Mesh with Traefik and Traefik Mesh" src="{{ 'assets/images/logos/traefik-labs-logo.svg' | url }}">
@@ -81,7 +84,7 @@
           <div class="menu-item-wrapper menu-item-wrapper--dropdown">
             <a class="menu-item menu-item--with-icon">
               <span class="title">Solutions</span>
-             <span class="icon">
+              <span class="icon">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down">
                   <polyline points="6 9 12 15 18 9"></polyline>
                 </svg>
@@ -98,12 +101,10 @@
                           <img src="{{ 'assets/images/header/solutions/kubernetes-icon.svg' | url }}" alt="Kubernetes Ingress">
                         </div>
                         <a href="/solutions/kubernetes-ingress/" class="dmi-details">
-                          <div class="dmi-title">
-                            Kubernetes Ingress
-                          </div>
+                          <div class="dmi-title">Kubernetes Ingress</div>
                           <div class="dmi-description">
-                            A centralized routing solution for your
-                            Kubernetes deployment
+                            A centralized routing solution for your Kubernetes
+                            deployment
                           </div>
                         </a>
                       </div>
@@ -124,12 +125,10 @@
                           <img src="{{ 'assets/images/header/solutions/docker-swarm-ingress.svg' | url }}" alt="Docker Swarm Ingress">
                         </div>
                         <a href="/solutions/docker-swarm-ingress/" class="dmi-details">
-                          <div class="dmi-title">
-                            Docker Swarm Ingress
-                          </div>
+                          <div class="dmi-title">Docker Swarm Ingress</div>
                           <div class="dmi-description">
-                            Powerful traffic management for your Docker
-                            Swarm deployment
+                            Powerful traffic management for your Docker Swarm
+                            deployment
                           </div>
                         </a>
                       </div>
@@ -140,7 +139,8 @@
                         <a href="/solutions/api-gateway/" class="dmi-details">
                           <div class="dmi-title">API Gateway</div>
                           <div class="dmi-description">
-                            Deploy, Secure, and Manage your microservices and APIs
+                            Deploy, Secure, and Manage your microservices and
+                            APIs
                           </div>
                         </a>
                       </div>
@@ -153,7 +153,7 @@
           <div class="menu-item-wrapper menu-item-wrapper--dropdown">
             <a class="menu-item menu-item--with-icon">
               <span class="title">Learn</span>
-             <span class="icon">
+              <span class="icon">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down">
                   <polyline points="6 9 12 15 18 9"></polyline>
                 </svg>
@@ -166,18 +166,14 @@
                     <div class="dropdown-submenu dropdown-submenu--learn">
                       <div class="dm-header">Learn</div>
                       <div class="dm-items">
-                        <a href="/blog/" class="dm-item">
-                          Blog
-                        </a>
+                        <a href="/blog/" class="dm-item"> Blog </a>
                         <a href="/resources/" class="dm-item">
                           Resource Library
                         </a>
                         <a href="/success-stories/" class="dm-item">
                           Success Stories
                         </a>
-                        <a href="/events/" class="dm-item">
-                          Events
-                        </a>
+                        <a href="/events/" class="dm-item"> Events </a>
                       </div>
                     </div>
                     <div class="dropdown-submenu dropdown-submenu--documentation">
@@ -203,9 +199,7 @@
                     <div class="dropdown-submenu dropdown-submenu--community">
                       <div class="dm-header">Community</div>
                       <div class="dm-items">
-                        <a href="/community/" class="dm-item">
-                          Overview
-                        </a>
+                        <a href="/community/" class="dm-item"> Overview </a>
                         <a href="https://community.traefik.io/" class="dm-item">
                           Forum
                         </a>
@@ -225,7 +219,7 @@
           <div class="menu-item-wrapper menu-item-wrapper--dropdown">
             <a class="menu-item menu-item--with-icon">
               <span class="title">Company</span>
-             <span class="icon">
+              <span class="icon">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down">
                   <polyline points="6 9 12 15 18 9"></polyline>
                 </svg>
@@ -238,32 +232,18 @@
                     <div class="dropdown-submenu dropdown-submenu--company">
                       <div class="dm-header">Company</div>
                       <div class="dm-items">
-                        <a href="/about-us/" class="dm-item">
-                          About
-                        </a>
-                        <a href="/partners/" class="dm-item">
-                          Partners
-                        </a>
-                        <a href="/careers/" class="dm-item">
-                          Careers
-                        </a>
-                        <a href="/press/" class="dm-item">
-                          Press
-                        </a>
-                        <a href="/contact-us/" class="dm-item">
-                          Contact Us
-                        </a>
+                        <a href="/about-us/" class="dm-item"> About </a>
+                        <a href="/partners/" class="dm-item"> Partners </a>
+                        <a href="/careers/" class="dm-item"> Careers </a>
+                        <a href="/press/" class="dm-item"> Press </a>
+                        <a href="/contact-us/" class="dm-item"> Contact Us </a>
                       </div>
                     </div>
                     <div class="dropdown-submenu dropdown-submenu--events">
                       <div class="dm-header">Events</div>
                       <div class="dm-items">
-                        <a href="/events/" class="dm-item">
-                          View all events
-                        </a>
-                        <a href="/events/meetup/" class="dm-item">
-                          Meetup
-                        </a>
+                        <a href="/events/" class="dm-item"> View all events </a>
+                        <a href="/events/meetup/" class="dm-item"> Meetup </a>
                       </div>
                     </div>
                   </div>
@@ -282,6 +262,9 @@
         </nav>
       </div>
       <div class="right">
+        <label class="md-icon md-icon--search md-header-nav__button" for="__search">
+          {% include ".icons/material/magnify.svg" %}
+        </label>
         <div class="site-header__demo-button">
           <button class="button--secondary">Get a demo</button>
         </div>

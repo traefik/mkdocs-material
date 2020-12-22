@@ -1,0 +1,85 @@
+<nav class="product-switcher">
+  <div class="menu-item-wrapper menu-item-wrapper--dropdown">
+    <a class="menu-item menu-item--with-icon">
+      <img
+        src="{{ 'assets/images/logos/traefik-proxy-logo.svg' | url }}"
+        height="48px"
+        width="auto"
+        alt="Traefik Proxy"
+      />
+      <span class="icon">
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="feather feather-chevron-down"
+        >
+          <polyline points="6 9 12 15 18 9"></polyline>
+        </svg>
+      </span>
+    </a>
+
+    <div class="nav-dropdown-menu nav-dropdown-menu--products">
+      <div class="nav-dropdown-menu-wrapper">
+        <div class="dm-header">Product Documentations</div>
+        <div class="dm-items">
+          <div class="dm-item">
+            <div class="dmi-image mesh">
+              <img
+                src="{{ 'assets/images/header/products/traefik-mesh.svg' | url }}"
+                alt="Traefik Mesh Documentation"
+              />
+            </div>
+            <a class="dmi-details" href="https://doc.traefik.io/traefik-mesh/">
+              <div class="dmi-title">Traefik Mesh</div>
+              <div class="dmi-description">
+                The simplest service mesh
+              </div>
+            </a>
+          </div>
+
+          <div class="dm-item dm-item--traefikee">
+            <div class="dmi-image enterprise">
+              <img
+                src="{{ 'assets/images/header/products/traefik-enterprise.svg' | url }}"
+                alt="Traefik Enterprise Documentation"
+              />
+            </div>
+            <a
+              class="dmi-details"
+              href="https://doc.traefik.io/traefik-enterprise/"
+            >
+              <div class="dmi-title">Traefik Enterprise</div>
+              <div class="dmi-description">
+                All-in-one ingress, API management, and service mesh.
+              </div>
+            </a>
+          </div>
+
+          <div class="dm-item dm-item--pilot">
+            <div class="dmi-image pilot">
+              <img
+                src="{{ 'assets/images/header/products/traefik-pilot.svg' | url }}"
+                alt="Traefik Pilot Documentation"
+              />
+            </div>
+            <a
+              class="dmi-details"
+              href="https://doc.traefik.io/traefik-pilot/"
+            >
+              <div class="dmi-title">Traefik Pilot</div>
+              <div class="dmi-description">
+                The Control Center for Traefik
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
