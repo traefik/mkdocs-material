@@ -1031,6 +1031,9 @@ pre .md-clipboard:focus, pre .md-clipboard:hover {
   }
 }
 
+.md-footer-nav {
+  background-color: var(--dark);
+}
 .md-footer-nav__inner {
   padding: 0.2rem;
   overflow: auto;
@@ -3682,7 +3685,6 @@ html .md-typeset .tabbed-set > label:hover {
   transition: height 0.1s;
   z-index: 100;
   background: white;
-  position: relative;
   box-shadow: 0 0 7px 0 #00000021;
   border-bottom: 1px solid #e2e2e2;
   height: 64px;
@@ -4172,6 +4174,11 @@ html .md-typeset .tabbed-set > label:hover {
   background-color: #FFFFFF;
 }
 
+.md-sidebar--primary, .md-sidebar--secondary {
+  height: initial !important;
+  top: 2.8rem !important;
+}
+
 .md-sidebar--secondary .md-nav__title {
   font-size: 12px;
   text-transform: uppercase;
@@ -4329,10 +4336,12 @@ p {
 }
 
 .product-switcher {
+  height: initial !important;
   color: #06102a;
   font-size: 10px;
   font-family: "Rubik", -apple-system, "BlinkMacSystemFont", "Segoe UI", "Helvetica Neue", sans-serif;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  margin-bottom: 16px;
 }
 .product-switcher img {
   margin-right: 10px;
@@ -4346,6 +4355,7 @@ p {
 }
 .product-switcher .menu-item-wrapper {
   display: inline-block;
+  padding-left: 15px;
 }
 .product-switcher .menu-item {
   color: #06102a;

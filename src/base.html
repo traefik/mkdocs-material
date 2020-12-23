@@ -227,14 +227,14 @@
     <div class="md-container" data-md-component="container">
 
       <!-- Hero teaser -->
-      {% block hero %}{% endblock %}
+      <!-- {% block hero %}{% endblock %} -->
 
       <!-- Tabs navigation -->
-      {% block tabs %}
+      <!-- {% block tabs %}
         {% if "navigation.tabs" in config.theme.features %}
           {% include "partials/tabs.html" %}
         {% endif %}
-      {% endblock %}
+      {% endblock %} -->
 
       <!-- Main area -->
       <main class="md-main" data-md-component="main">
@@ -245,21 +245,18 @@
 
             <!-- Main navigation -->
             {% if nav %}
-              {% include "partials/product-switcher.html" %}
-              <div
-                class="md-sidebar md-sidebar--primary"
-                data-md-component="navigation"
-              >
+            <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                {% include "partials/product-switcher.html" %}
                 {% include "partials/search.html" %}
                 {% if "search" in config["plugins"] %}
-                    <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+                  <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
                 {% endif %}
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
-                    {% include "partials/nav.html" %}
+                  {% include "partials/nav.html" %}
                   </div>
                 </div>
-              </div>
+            </div>
             {% endif %}
 
             <!-- Table of contents -->

@@ -28,6 +28,11 @@
   background-color: #FFFFFF;
 }
 
+.md-sidebar--primary, .md-sidebar--secondary {
+  height: initial !important;
+  top: 2.8rem !important;
+}
+
 .md-sidebar--secondary .md-nav__title {
   font-size: 12px;
   text-transform: uppercase;
