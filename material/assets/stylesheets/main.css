@@ -2128,6 +2128,11 @@ html .md-nav__link[for=__toc] ~ .md-nav {
     display: none;
   }
 }
+@media screen and (min-width: 45em) {
+  .md-sidebar {
+    top: 2.4rem !important;
+  }
+}
 @media screen and (max-width: 76.1875em) {
   .md-sidebar--primary {
     position: fixed;
@@ -4167,12 +4172,7 @@ html .md-typeset .tabbed-set > label:hover {
 }
 
 .md-sidebar--primary {
-  background-color: #FFFFFF;
-}
-
-.md-sidebar--primary, .md-sidebar--secondary {
-  height: initial !important;
-  top: 2.8rem !important;
+  background-color: #ffffff;
 }
 
 .md-sidebar--secondary .md-nav__title {
@@ -4189,6 +4189,7 @@ html .md-typeset .tabbed-set > label:hover {
 .md-sidebar--secondary .md-sidebar__scrollwrap {
   border-radius: 8px;
   background-color: var(--light-blue) !important;
+  height: initial !important;
 }
 
 .md-sidebar--secondary .md-nav__title {
@@ -4259,6 +4260,14 @@ html .md-typeset .tabbed-set > label:hover {
 @media only screen and (min-width: 60em) {
   [data-md-toggle=search]:checked ~ .md-header .md-search__inner {
     margin-top: 100px;
+  }
+}
+@media screen and (max-width: 76.1875em) {
+  .md-search__inner {
+    top: 64px;
+    right: 0;
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 .md-container {
@@ -4341,6 +4350,7 @@ p {
   font-size: 10px;
   font-family: "Rubik", -apple-system, "BlinkMacSystemFont", "Segoe UI", "Helvetica Neue", sans-serif;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  padding-bottom: 20px;
 }
 .product-switcher img {
   margin-right: 10px;
