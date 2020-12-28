@@ -113,18 +113,18 @@
         <div class="md-main__inner md-grid">
           {% block site_nav %}
             {% if nav %}
-            <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
-                {% include "partials/product-switcher.html" %}
-                {% include "partials/search.html" %}
-                {% if "search" in config["plugins"] %}
-                  <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
-                {% endif %}
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                  {% include "partials/nav.html" %}
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                  {% include "partials/product-switcher.html" %}
+                  <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                  {% include "partials/search.html" %}
+                    <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+                  <div class="md-sidebar__scrollwrap">
+                    <div class="md-sidebar__inner">
+                    {% include "partials/nav.html" %}
+                    </div>
                   </div>
                 </div>
-            </div>
+              </div>
             {% endif %}
             {% if page.toc %}
               <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
