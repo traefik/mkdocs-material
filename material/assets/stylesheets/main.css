@@ -1807,9 +1807,6 @@ html .md-nav__link[for=__toc] ~ .md-nav {
   }
 }
 @media screen and (min-width: 60em) {
-  .md-search__icon[for=__search] {
-    pointer-events: none;
-  }
   .md-search__icon[for=__search] svg:last-child {
     display: none;
   }
