@@ -27,7 +27,7 @@
         <meta name="author" content="{{ config.site_author }}">
       {% endif %}
       <link rel="shortcut icon" href="{{ config.theme.favicon | url }}">
-      <meta name="generator" content="mkdocs-{{ mkdocs_version }}, mkdocs-traefiklabs-test-0.1.0">
+      <meta name="generator" content="mkdocs-{{ mkdocs_version }}, mkdocs-traefiklabs-test-0.1.1">
     {% endblock %}
     {% block htmltitle %}
       {% if page and page.meta and page.meta.title %}
@@ -39,7 +39,7 @@
       {% endif %}
     {% endblock %}
     {% block styles %}
-      <link rel="stylesheet" href="{{ 'assets/stylesheets/main.0142d0e3.min.css' | url }}">
+      <link rel="stylesheet" href="{{ 'assets/stylesheets/main.09c1fee1.min.css' | url }}">
       {% if config.theme.palette %}
         {% set palette = config.theme.palette %}
         <link rel="stylesheet" href="{{ 'assets/stylesheets/palette.0cee5c6d.min.css' | url }}">
@@ -128,6 +128,13 @@
             {% endif %}
             {% if page.toc %}
               <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                {% if config.repo_url %}
+                  <div class="md-flex__cell md-flex__cell--shrink repo_url">
+                    <div class="md-header-nav__source">
+                      {% include "partials/source.html" %}
+                    </div>
+                  </div>
+                {% endif %}
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     {% include "partials/toc.html" %}
