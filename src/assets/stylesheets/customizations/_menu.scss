@@ -96,6 +96,15 @@
   color: black !important;
 }
 
+.md-header-nav__source {
+  margin-left: 0;
+}
+
+.repo_url {
+  height: initial !important;
+  margin-bottom: 0.4rem;
+}
+
 @media only screen and (min-width: 60em) {
   [data-md-toggle=search]:checked~.md-header .md-search__inner {
     margin-top: 100px;
