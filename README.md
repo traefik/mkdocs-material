@@ -19,7 +19,7 @@
 Material for MkDocs can be installed with `pip`:
 
 ``` sh
-pip install mkdocs-traefiklabs-test
+pip install mkdocs-traefiklabs
 ```
 
 Add the following line to `mkdocs.yml`:
