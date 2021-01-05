@@ -1,8 +1,8 @@
 .md-nav__link {
   margin-left: -0.4rem;
   padding: 0 0.4rem;
-  line-height: 32px;
   color: var(--dark) !important;
+  line-height: 32px;
 }
 
 .md-nav__link::after {
@@ -13,36 +13,32 @@
 .md-nav__toggle:checked + .md-nav__link,
 .md-nav__link--active,
 .md-nav__link:hover {
-  border-radius: 8px;
-  background-color: var(--light-blue) !important;
   color: var(--dark) !important;
-  transition: background-color 0.3s ease;
+  background-color: var(--light-blue) !important;
+  border-radius: 8px;
+  transition: background-color 300ms ease;
 }
 
 .md-nav__link--active {
   color: var(--blue) !important;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .md-sidebar--primary {
-  background-color: #ffffff;
+  background-color: #FFFFFF;
 }
 
 .md-sidebar--secondary .md-nav__title {
+  margin-bottom: 0.4rem;
+  padding: 0.8rem 0.4rem 0.8rem;
   font-size: 12px;
   text-transform: uppercase;
-  margin-bottom: 0.4rem;
-  padding: 0;
 }
 
 .md-sidebar--secondary .md-sidebar__scrollwrap {
-  border-radius: 8px;
-  background-color: var(--light-blue) !important;
   height: initial !important;
-}
-
-.md-sidebar--secondary .md-nav__title {
-  padding: 0.8rem 0.4rem 0.8rem;
+  background-color: var(--light-blue) !important;
+  border-radius: 8px;
 }
 
 .md-sidebar--secondary .md-nav__list {
@@ -58,7 +54,7 @@
   .md-nav__link[data-md-state="blur"],
 .md-sidebar--secondary .md-sidebar__scrollwrap .md-nav__link:hover {
   color: var(--blue) !important;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .md-sidebar--secondary .md-nav__item {
@@ -75,17 +71,17 @@
 }
 
 .md-search__inner {
-  width: inherit;
   float: inherit;
-  margin-left: 0.5rem;
+  width: inherit;
   margin-right: 0.5rem;
+  margin-left: 0.5rem;
 }
 
 .md-search__input {
   margin-bottom: 10px;
-  border-radius: 4px;
   background-color: inherit;
   border: 1px solid rgba(0, 0, 0, 0.07);
+  border-radius: 4px;
 }
 
 .md-search__input::placeholder {
@@ -93,13 +89,14 @@
 }
 
 .md-search__icon {
-  color: black !important;
+  color: #000000 !important;
 }
 
 .md-header-nav__source {
   margin-left: 0;
 }
 
+/* stylelint-disable-next-line selector-class-pattern */
 .repo_url {
   height: initial !important;
   margin-bottom: 0.4rem;
@@ -115,7 +112,7 @@
   .md-search__inner {
     top: 64px;
     right: 0;
-    margin-left: 0;
     margin-right: 0;
+    margin-left: 0;
   }
 }

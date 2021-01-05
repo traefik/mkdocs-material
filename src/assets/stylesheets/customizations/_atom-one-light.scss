@@ -20,8 +20,8 @@ hue-6-2: #C18401
 
 .hljs {
   display: block;
-  overflow-x: auto;
   padding: 0.5em;
+  overflow-x: auto;
   color: #383A42;
   background: #FAFAFA;
 }
@@ -58,6 +58,7 @@ hue-6-2: #C18401
   color: #50A14F;
 }
 
+/* stylelint-disable-next-line selector-class-pattern */
 .hljs-built_in,
 .hljs-class .hljs-title {
   color: #C18401;
@@ -88,7 +89,7 @@ hue-6-2: #C18401
 }
 
 .hljs-strong {
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .hljs-link {

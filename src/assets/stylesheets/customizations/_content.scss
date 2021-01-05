@@ -4,7 +4,7 @@
 
 .md-content h1 {
   color: var(--dark) !important;
-  font-weight: bold !important;
+  font-weight: 700 !important;
 }
 
 .md-content a {
@@ -22,15 +22,15 @@
 }
 
 .md-typeset table:not([class]) th {
-  background: var(--dark) !important;
   color: #FFFFFF !important;
+  background: var(--dark) !important;
 }
 
 /* Front page image size */
-img[src$='#small'] {
+img[src$="#small"] {
   width: 150px;
 }
-img[src$='#medium'] {
+img[src$="#medium"] {
   width: 300px;
 }
 
@@ -61,8 +61,8 @@ article ol:not([class]) {
 }
 
 .md-typeset__table tr :nth-child(1) {
-  word-wrap: break-word;
   max-width: 30em;
+  word-wrap: break-word;
 }
 
 p {

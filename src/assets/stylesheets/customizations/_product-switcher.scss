@@ -1,11 +1,11 @@
 .product-switcher {
   height: initial !important;
-  color: #06102a;
+  padding-bottom: 20px;
+  color: #06102A;
   font-size: 10px;
-  font-family: "Rubik", -apple-system, "BlinkMacSystemFont", "Segoe UI",
+  font-family: Rubik, -apple-system, BlinkMacSystemFont, "Segoe UI",
     "Helvetica Neue", sans-serif;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  padding-bottom: 20px;
 
   img {
     margin-right: 10px;
@@ -15,48 +15,47 @@
     margin: 0 2px 0 16px;
   }
 
-  .nav-dropdown-menu-wrapper {
-    width: auto;
-    height: auto;
-  }
-
   .menu-item-wrapper {
     display: inline-block;
     padding-left: 15px;
   }
 
   .menu-item {
-    color: #06102a;
-    transition: all 0.05s;
+    color: #06102A;
+    font-weight: 500;
     font-size: 1.45em;
     line-height: 1em;
-    font-weight: 500;
+    transition: all 50ms;
   }
 
   .menu-item:hover {
-    color: #8a959e;
+    color: #8A959E;
   }
 
+  /* stylelint-disable-next-line selector-class-pattern */
   .menu-item--with-icon {
     display: flex;
     align-items: center;
     justify-content: flex-start;
   }
 
+  /* stylelint-disable-next-line selector-class-pattern */
   .menu-item--with-icon .title {
     margin-right: 3px;
   }
 
+  /* stylelint-disable-next-line selector-class-pattern */
   .menu-item--with-icon .icon {
     width: 20px;
     height: 20px;
-    transition: all 0.1s;
+    transition: all 100ms;
   }
 
+  /* stylelint-disable-next-line selector-class-pattern */
   .menu-item--with-icon .icon svg {
-    stroke-width: 2.5 !important;
     width: 100%;
     height: 100%;
+    stroke-width: 2.5 !important;
   }
 
   .menu-item-wrapper--dropdown {
@@ -68,18 +67,20 @@
   }
 
   .nav-dropdown-menu {
-    display: none;
     position: absolute;
     z-index: 500;
+    display: none;
     background: transparent;
   }
 
   .nav-dropdown-menu-wrapper {
-    border-radius: 8px;
-    box-shadow: 0 12px 40px 0 rgba(1, 10, 32, 0.24);
-    background: white;
+    width: auto;
+    height: auto;
     margin: 8px 0;
     overflow: hidden;
+    background: #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 0 12px 40px 0 rgba(1, 10, 32, 0.24);
   }
 
   .nav-dropdown-menu--products {
@@ -91,59 +92,59 @@
   }
 
   .nav-dropdown-menu--products .dm-header {
-    font-size: 1.1em;
+    margin-bottom: 20px;
+    color: #505769;
     font-weight: 500;
-    font-stretch: normal;
+    font-size: 1.1em;
     font-style: normal;
+    font-stretch: normal;
     line-height: normal;
     letter-spacing: 3.67px;
-    color: #505769;
-    margin-bottom: 20px;
     text-transform: uppercase;
   }
   .nav-dropdown-menu--products .dm-item {
-    border: none;
-    margin: 0 0 24px;
-    color: #06102a;
-    transition: all 0.1s;
     position: relative;
     width: 100%;
+    margin: 0 0 24px;
+    color: #06102A;
+    border: none;
+    transition: all 100ms;
   }
   .nav-dropdown-menu--products .dm-item:last-child {
     margin-bottom: 0;
   }
   .nav-dropdown-menu--products .dm-item .dmi-image {
-    width: 104px;
-    height: 78px;
     position: absolute;
+    z-index: 0;
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 104px;
+    height: 78px;
     border-radius: 4px;
-    z-index: 0;
   }
 
   .nav-dropdown-menu--products .dm-item .dmi-details {
-    padding: 8px 0 10px 125px;
-    width: 100%;
-    background: transparent;
-    display: block;
-    color: #06102a;
     position: relative;
     z-index: 1;
+    display: block;
+    width: 100%;
+    padding: 8px 0 10px 125px;
+    color: #06102A;
+    background: transparent;
   }
   .nav-dropdown-menu--products .dm-item .dmi-details:hover {
-    color: #1e54d5;
+    color: #1E54D5;
   }
   .nav-dropdown-menu--products .dm-item .dmi-title {
-    font-size: 1.6em;
-    font-weight: 500;
     margin: 0 0 2px;
+    font-weight: 500;
+    font-size: 1.6em;
   }
   .nav-dropdown-menu--products .dm-item .dmi-description {
     font-size: 1.4em;
-    opacity: 0.7;
     line-height: 1.6em;
+    opacity: 0.7;
   }
   .nav-dropdown-menu--products .dm-item--traefikee .dmi-image img {
     transform: scale(1.1);
