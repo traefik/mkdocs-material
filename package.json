@@ -1,5 +1,5 @@
 {
-  "name": "mkdocs-traefiklabs-test",
+  "name": "mkdocs-traefiklabs",
   "version": "0.1.1",
   "description": "A Traefik Labs branded Material Design theme for MkDocs",
   "keywords": [
@@ -8,7 +8,7 @@
     "documentation",
     "theme"
   ],
-  "license": "Apache License 2.0",
+  "license": "MIT",
   "private": true,
   "contributors": [],
   "repository": {
