@@ -56,3 +56,27 @@
     }
   }
 }
+
+.button--primary {
+  display: inline-block;
+  padding: 15px 17px;
+  color: #FFFFFF!important;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1em;
+  letter-spacing: .05em;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: #1E54D5;
+  border: none!important;
+  border-radius: 8px;
+  outline: none;
+  cursor: pointer;
+  transition: all 200ms;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.button--primary--small {
+  padding: 20px 15px;
+  font-size: 12.5px;
+}

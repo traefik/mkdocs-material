@@ -40,6 +40,7 @@
         data-md-component="search-query"
         data-md-state="active"
         required
+        onfocus="document.querySelector('[data-md-toggle=search]').click()"
       />
       <label class="md-search__icon md-icon" for="__search">
         {% include ".icons/material/magnify.svg" %}

@@ -217,19 +217,9 @@
       {% endif %}
     </div>
 
-    <!-- Announcement bar -->
-    <div data-md-component="announce">
-      {% if self.announce() %}
-        <aside class="md-announce">
-          <div class="md-announce__inner md-grid md-typeset">
-            {% block announce %}{% endblock %}
-          </div>
-        </aside>
-      {% endif %}
-    </div>
-
     <!-- Application header -->
     {% block header %}
+      {% include "partials/company-header.html" %}
       {% include "partials/header.html" %}
     {% endblock %}
 
@@ -237,14 +227,14 @@
     <div class="md-container" data-md-component="container">
 
       <!-- Hero teaser -->
-      {% block hero %}{% endblock %}
+      <!-- {% block hero %}{% endblock %} -->
 
       <!-- Tabs navigation -->
-      {% block tabs %}
+      <!-- {% block tabs %}
         {% if "navigation.tabs" in config.theme.features %}
           {% include "partials/tabs.html" %}
         {% endif %}
-      {% endblock %}
+      {% endblock %} -->
 
       <!-- Main area -->
       <main class="md-main" data-md-component="main">
@@ -255,13 +245,15 @@
 
             <!-- Main navigation -->
             {% if nav %}
-              <div
-                class="md-sidebar md-sidebar--primary"
-                data-md-component="navigation"
-              >
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                {% include "partials/product-switcher.html" %}
+                {% include "partials/search.html" %}
+                {% if "search" in config["plugins"] %}
+                  <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+                {% endif %}
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
-                    {% include "partials/nav.html" %}
+                  {% include "partials/nav.html" %}
                   </div>
                 </div>
               </div>
@@ -269,10 +261,14 @@
 
             <!-- Table of contents -->
             {% if page.toc %}
-              <div
-                class="md-sidebar md-sidebar--secondary"
-                data-md-component="toc"
-              >
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                {% if config.repo_url %}
+                  <div class="md-flex__cell md-flex__cell--shrink repo_url">
+                    <div class="md-header-nav__source">
+                      {% include "partials/source.html" %}
+                    </div>
+                  </div>
+                {% endif %}
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     {% include "partials/toc.html" %}
@@ -383,6 +379,8 @@
       {% for path in config["extra_javascript"] %}
         <script src="{{ path | url }}"></script>
       {% endfor %}
+      <script src="assets/javascripts/utilities/hljs/highlight.pack.js" />
+      <script src="assets/javascripts/utilities/hljs/extra.js" />
     {% endblock %}
   </body>
 </html>

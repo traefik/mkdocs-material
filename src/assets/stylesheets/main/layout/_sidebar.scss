@@ -61,6 +61,10 @@ $md-toggle__drawer--checked:
     display: none;
   }
 
+  @include break-from-device(tablet) {
+    top: px2rem(48px) !important;
+  }
+
   // [tablet -]: Convert navigation to drawer
   @include break-to-device(tablet) {
 

@@ -1,27 +1,19 @@
 {
-  "name": "mkdocs-material",
-  "version": "6.1.7",
-  "description": "A Material Design theme for MkDocs",
+  "name": "mkdocs-traefiklabs",
+  "version": "0.1.1",
+  "description": "A Traefik Labs branded Material Design theme for MkDocs",
   "keywords": [
     "mkdocs",
+    "traefik labs",
     "documentation",
     "theme"
   ],
-  "homepage": "https://squidfunk.github.io/mkdocs-material/",
-  "bugs": {
-    "url": "https://github.com/squidfunk/mkdocs-material/issues",
-    "email": "martin.donath@squidfunk.com"
-  },
   "license": "MIT",
   "private": true,
-  "author": {
-    "name": "Martin Donath",
-    "email": "martin.donath@squidfunk.com"
-  },
   "contributors": [],
   "repository": {
     "type": "git",
-    "url": "https://github.com/squidfunk/mkdocs-material.git"
+    "url": "https://github.com/traefik/mkdocs-material.git"
   },
   "scripts": {
     "build": "npm run clean && npx webpack --mode production",
@@ -29,7 +21,9 @@
     "lint": "npm run lint:ts && npm run lint:scss",
     "lint:scss": "npx stylelint \"src/assets/**/*.scss\"",
     "lint:ts": "npx tslint -p tsconfig.json \"src/**/*.ts\"",
-    "start": "npx webpack --mode development --watch"
+    "start": "npx webpack --mode development --watch",
+    "setup": "python3 setup.py bdist_wheel",
+    "deploy": "npm run setup && twine upload dist/*"
   },
   "dependencies": {
     "clipboard": "^2.0.6",

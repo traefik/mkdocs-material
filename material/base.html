@@ -27,7 +27,7 @@
         <meta name="author" content="{{ config.site_author }}">
       {% endif %}
       <link rel="shortcut icon" href="{{ config.theme.favicon | url }}">
-      <meta name="generator" content="mkdocs-{{ mkdocs_version }}, mkdocs-material-6.1.7">
+      <meta name="generator" content="mkdocs-{{ mkdocs_version }}, mkdocs-traefiklabs-test-0.1.1">
     {% endblock %}
     {% block htmltitle %}
       {% if page and page.meta and page.meta.title %}
@@ -39,10 +39,10 @@
       {% endif %}
     {% endblock %}
     {% block styles %}
-      <link rel="stylesheet" href="{{ 'assets/stylesheets/main.19753c6b.min.css' | url }}">
+      <link rel="stylesheet" href="{{ 'assets/stylesheets/main.css' | url }}">
       {% if config.theme.palette %}
         {% set palette = config.theme.palette %}
-        <link rel="stylesheet" href="{{ 'assets/stylesheets/palette.196e0c26.min.css' | url }}">
+        <link rel="stylesheet" href="{{ 'assets/stylesheets/palette.css' | url }}">
         {% if palette.primary %}
           {% import "partials/palette.html" as map %}
           {% set primary = map.primary(
@@ -104,39 +104,37 @@
         </a>
       {% endif %}
     </div>
-    <div data-md-component="announce">
-      {% if self.announce() %}
-        <aside class="md-announce">
-          <div class="md-announce__inner md-grid md-typeset">
-            {% block announce %}{% endblock %}
-          </div>
-        </aside>
-      {% endif %}
-    </div>
     {% block header %}
+      {% include "partials/company-header.html" %}
       {% include "partials/header.html" %}
     {% endblock %}
     <div class="md-container" data-md-component="container">
-      {% block hero %}{% endblock %}
-      {% block tabs %}
-        {% if "navigation.tabs" in config.theme.features %}
-          {% include "partials/tabs.html" %}
-        {% endif %}
-      {% endblock %}
       <main class="md-main" data-md-component="main">
         <div class="md-main__inner md-grid">
           {% block site_nav %}
             {% if nav %}
               <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                {% include "partials/product-switcher.html" %}
+                {% include "partials/search.html" %}
+                {% if "search" in config["plugins"] %}
+                  <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+                {% endif %}
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
-                    {% include "partials/nav.html" %}
+                  {% include "partials/nav.html" %}
                   </div>
                 </div>
               </div>
             {% endif %}
             {% if page.toc %}
               <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                {% if config.repo_url %}
+                  <div class="md-flex__cell md-flex__cell--shrink repo_url">
+                    <div class="md-header-nav__source">
+                      {% include "partials/source.html" %}
+                    </div>
+                  </div>
+                {% endif %}
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     {% include "partials/toc.html" %}
@@ -177,8 +175,8 @@
       {% endblock %}
     </div>
     {% block scripts %}
-      <script src="{{ 'assets/javascripts/vendor.0ac82a11.min.js' | url }}"></script>
-      <script src="{{ 'assets/javascripts/bundle.f81dfb4d.min.js' | url }}"></script>
+      <script src="{{ 'assets/javascripts/vendor.js' | url }}"></script>
+      <script src="{{ 'assets/javascripts/bundle.js' | url }}"></script>
       {%- set translations = {} -%}
       {%- for key in [
         "clipboard.copy",
@@ -206,13 +204,13 @@
           base: "{{ base_url }}",
           features: {{ config.theme.features or [] | tojson }},
           search: Object.assign({
-            worker: "{{ 'assets/javascripts/worker/search.4ac00218.min.js' | url }}"
+            worker: "{{ 'assets/javascripts/worker/search.js' | url }}"
           }, typeof search !== "undefined" && search)
         })
       </script>
       {% for path in config["extra_javascript"] %}
         <script src="{{ path | url }}"></script>
       {% endfor %}
+      <script src="assets/javascripts/utilities/hljs/highlight.pack.js"><script src="assets/javascripts/utilities/hljs/extra.js">
     {% endblock %}
-  </body>
-</html>
+  </body></html>

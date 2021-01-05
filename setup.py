@@ -18,6 +18,7 @@
 # FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
 # IN THE SOFTWARE.
 
+
 import json
 from setuptools import setup, find_packages
 
@@ -38,15 +39,14 @@ with open("README.md", encoding = "utf-8") as data:
 
 # Package description
 setup(
-    name = "mkdocs-material",
+    name = "mkdocs-traefiklabs",
     version = package["version"],
-    url = package["homepage"],
+    url = "http://traefik.io",
     license = package["license"],
     description = package["description"],
     long_description = long_description,
     long_description_content_type = "text/markdown",
-    author = package["author"]["name"],
-    author_email = package["author"]["email"],
+    author = "traefiklabs",
     keywords = package["keywords"],
     classifiers = [
         "Development Status :: 5 - Production/Stable",
@@ -63,7 +63,7 @@ setup(
     install_requires = install_requires,
     entry_points = {
         "mkdocs.themes": [
-            "material = material",
+            "traefik-labs = material",
         ]
     },
     zip_safe = False

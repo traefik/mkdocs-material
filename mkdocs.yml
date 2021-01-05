@@ -33,7 +33,7 @@ repo_url: https://github.com/squidfunk/mkdocs-material
 edit_uri: ""
 
 # Copyright
-copyright: Copyright &copy; 2016 - 2020 Martin Donath
+copyright: Copyright © 2016-2020 Containous; 2020 Traefik Labs
 
 # Configuration
 theme:
@@ -60,7 +60,7 @@ theme:
   font:
     text: Roboto
     code: Roboto Mono
-  favicon: assets/favicon.png
+  favicon: assets/favicon.ico
   icon:
     logo: logo
 
@@ -191,3 +191,5 @@ nav:
 google_analytics:
   - !!python/object/apply:os.getenv ["GOOGLE_ANALYTICS_KEY"]
   - auto
+
+product: 'pilot'

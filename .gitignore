@@ -41,3 +41,5 @@ venv
 
 # IDEs
 .vscode
+
+*.egg-info/

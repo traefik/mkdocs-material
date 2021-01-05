@@ -571,7 +571,7 @@
 
       // Rotate icon for expanded lists
       .md-nav__item--nested .md-nav__toggle:checked ~ .md-nav__link & {
-        transform: rotate(90deg);
+        transform: translate(0, 50%) rotate(90deg);
       }
     }
   }
