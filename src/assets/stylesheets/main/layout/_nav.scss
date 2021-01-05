@@ -77,6 +77,7 @@
 
   // List of items
   &__list {
+    width: 100%;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -110,7 +111,8 @@
 
   // Link inside item
   &__link {
-    display: block;
+    display: flex;
+    align-items: center;
     margin-top: 0.625em;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -535,7 +537,7 @@
 
     // Show nested navigation, if toggle is checked
     .md-nav__toggle:checked ~ & {
-      display: block;
+      display: flex;
     }
 
     // Hide titles for nested navigation
@@ -543,9 +545,14 @@
       display: none;
     }
 
+    &__item-title {
+      display: flex;
+      flex-grow: 1;
+    }
+
     // Navigation icon
     &__icon {
-      float: right;
+      display: flex;
       width: px2rem(18px);
       height: px2rem(18px);
       transition: transform 250ms;
@@ -561,7 +568,6 @@
         display: inline-block;
         width: 100%;
         height: 100%;
-        vertical-align: px2rem(-2px);
         background-color: currentColor;
         mask-image: var(--md-nav-icon--next);
         mask-repeat: no-repeat;
@@ -571,7 +577,7 @@
 
       // Rotate icon for expanded lists
       .md-nav__item--nested .md-nav__toggle:checked ~ .md-nav__link & {
-        transform: translate(0, 50%) rotate(90deg);
+        transform: rotate(90deg);
       }
     }
   }
