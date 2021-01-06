@@ -1220,9 +1220,9 @@ html .md-footer-meta.md-typeset a:focus, html .md-footer-meta.md-typeset a:hover
   fill: currentColor;
 }
 .md-nav__list {
+  width: 100%;
   margin: 0;
   padding: 0;
-  width: 100%;
   list-style: none;
 }
 .md-nav__item {
