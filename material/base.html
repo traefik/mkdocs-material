@@ -27,7 +27,7 @@
         <meta name="author" content="{{ config.site_author }}">
       {% endif %}
       <link rel="shortcut icon" href="{{ config.theme.favicon | url }}">
-      <meta name="generator" content="mkdocs-{{ mkdocs_version }}, mkdocs-traefiklabs-test-0.1.1">
+      <meta name="generator" content="mkdocs-{{ mkdocs_version }}, mkdocs-traefiklabs-100.0.0">
     {% endblock %}
     {% block htmltitle %}
       {% if page and page.meta and page.meta.title %}
@@ -211,6 +211,6 @@
       {% for path in config["extra_javascript"] %}
         <script src="{{ path | url }}"></script>
       {% endfor %}
-      <script src="assets/javascripts/utilities/hljs/highlight.pack.js"><script src="assets/javascripts/utilities/hljs/extra.js">
     {% endblock %}
-  </body></html>
+  </body>
+</html>
