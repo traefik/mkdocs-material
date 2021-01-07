@@ -22,7 +22,7 @@ name: documentation
 on:
   push:
     branches:
-      - main
+      - master
 
 env:
   PYTHON_VERSION: 3.x
