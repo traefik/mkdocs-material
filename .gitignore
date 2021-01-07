@@ -43,5 +43,3 @@ venv
 .vscode
 
 *.egg-info/
-
-material/
