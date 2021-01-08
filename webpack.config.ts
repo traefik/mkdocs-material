@@ -21,14 +21,11 @@
  */
 
 import * as CopyPlugin from "copy-webpack-plugin"
-import * as EventHooksPlugin from "event-hooks-webpack-plugin"
-import * as fs from "fs"
 import { minify as minhtml } from "html-minifier"
 import IgnoreEmitPlugin from "ignore-emit-webpack-plugin"
 import ImageminPlugin from "imagemin-webpack-plugin"
 import MiniCssExtractPlugin = require("mini-css-extract-plugin")
 import * as path from "path"
-import { toPairs } from "ramda"
 import { minify as minjs } from "terser"
 import { TsconfigPathsPlugin } from "tsconfig-paths-webpack-plugin"
 import { Configuration } from "webpack"
@@ -320,29 +317,6 @@ export default (_env: never, args: Configuration): Configuration[] => {
             context: "src",
             ...pattern
           }))
-        }),
-
-        /* Hooks */
-        new EventHooksPlugin({
-          afterEmit: () => {
-
-            /* Replace asset URLs in templates */
-            if (args.mode === "production") {
-              const manifest = require("./material/assets/manifest.json")
-              for (const file of [
-                "material/base.html",
-                "material/overrides/main.html"
-              ]) {
-                const template = toPairs<string>(manifest)
-                  .reduce((content, [from, to]) => {
-                    return content.replace(new RegExp(from, "g"), to)
-                  }, fs.readFileSync(file, "utf8"))
-
-                /* Save template with replaced assets */
-                fs.writeFileSync(file, template, "utf8")
-              }
-            }
-          }
         }),
 
         /* Minify SVGs */

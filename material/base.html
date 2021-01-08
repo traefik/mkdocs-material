@@ -1,7 +1,7 @@
 {#-
   This file was automatically generated - do not edit
 -#}
-{% import "partials/partials/language.html" as lang with context %}
+{% import "partials/language.html" as lang with context %}
 <!doctype html>
 <html lang="{{ lang.t('language') }}" class="no-js">
   <head>
@@ -27,7 +27,7 @@
         <meta name="author" content="{{ config.site_author }}">
       {% endif %}
       <link rel="shortcut icon" href="{{ config.theme.favicon | url }}">
-      <meta name="generator" content="mkdocs-{{ mkdocs_version }}, mkdocs-traefiklabs-100.0.2">
+      <meta name="generator" content="mkdocs-{{ mkdocs_version }}, mkdocs-traefiklabs-100.0.3">
     {% endblock %}
     {% block htmltitle %}
       {% if page and page.meta and page.meta.title %}
@@ -39,12 +39,12 @@
       {% endif %}
     {% endblock %}
     {% block styles %}
-      <link rel="stylesheet" href="{{ 'assets/stylesheets/main.92b813f4.min.css' | url }}">
+      <link rel="stylesheet" href="{{ 'assets/stylesheets/main.css' | url }}">
       {% if config.theme.palette %}
         {% set palette = config.theme.palette %}
-        <link rel="stylesheet" href="{{ 'assets/stylesheets/palette.a44cd350.min.css' | url }}">
+        <link rel="stylesheet" href="{{ 'assets/stylesheets/palette.css' | url }}">
         {% if palette.primary %}
-          {% import "partials/partials/palette.html" as map %}
+          {% import "partials/palette.html" as map %}
           {% set primary = map.primary(
             palette.primary | replace(" ", "-") | lower
           ) %}
@@ -72,7 +72,7 @@
     {% endfor %}
     {% block analytics %}
       {% if config.google_analytics %}
-        {% include "partials/integrations/partials/integrations/analytipartials/language/cs.html" %}
+        {% include "partials/integrations/analytics.html" %}
       {% endif %}
     {% endblock %}
     {% block extrahead %}{% endblock %}
@@ -105,8 +105,8 @@
       {% endif %}
     </div>
     {% block header %}
-      {% include "partials/partials/company-partials/header.html" %}
-      {% include "partials/partials/header.html" %}
+      {% include "partials/company-header.html" %}
+      {% include "partials/header.html" %}
     {% endblock %}
     <div class="md-container" data-md-component="container">
       <main class="md-main" data-md-component="main">
@@ -114,14 +114,14 @@
           {% block site_nav %}
             {% if nav %}
               <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
-                {% include "partials/partials/product-switcher.html" %}
-                {% include "partials/partials/search.html" %}
+                {% include "partials/product-switcher.html" %}
+                {% include "partials/search.html" %}
                 {% if "search" in config["plugins"] %}
                   <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
                 {% endif %}
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
-                  {% include "partials/partials/nav.html" %}
+                  {% include "partials/nav.html" %}
                   </div>
                 </div>
               </div>
@@ -131,13 +131,13 @@
                 {% if config.repo_url %}
                   <div class="md-flex__cell md-flex__cell--shrink repo_url">
                     <div class="md-header-nav__source">
-                      {% include "partials/partials/source.html" %}
+                      {% include "partials/source.html" %}
                     </div>
                   </div>
                 {% endif %}
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
-                    {% include "partials/partials/toc.html" %}
+                    {% include "partials/toc.html" %}
                   </div>
                 </div>
               </div>
@@ -148,7 +148,7 @@
               {% block content %}
                 {% if page.edit_url %}
                   <a href="{{ page.edit_url }}" title="{{ lang.t('edit.link.title') }}" class="md-content__button md-icon">
-                    {% include ".icons/material/.icons/material/pencil.svg" %}
+                    {% include ".icons/material/pencil.svg" %}
                   </a>
                 {% endif %}
                 {% if not "\x3ch1" in page.content %}
@@ -159,24 +159,24 @@
                   {% if page.meta.git_revision_date_localized or
                         page.meta.revision_date
                   %}
-                    {% include "partials/partials/source-date.html" %}
+                    {% include "partials/source-date.html" %}
                   {% endif %}
                 {% endif %}
               {% endblock %}
               {% block disqus %}
-                {% include "partials/integrations/partials/integrations/disqus.html" %}
+                {% include "partials/integrations/disqus.html" %}
               {% endblock %}
             </article>
           </div>
         </div>
       </main>
       {% block footer %}
-        {% include "partials/partials/footer.html" %}
+        {% include "partials/footer.html" %}
       {% endblock %}
     </div>
     {% block scripts %}
-      <script src="{{ 'assets/javascripts/vendor.08c56446.min.js' | url }}"></script>
-      <script src="{{ 'assets/javascripts/bundle.b242f96c.min.js' | url }}"></script>
+      <script src="{{ 'assets/javascripts/vendor.js' | url }}"></script>
+      <script src="{{ 'assets/javascripts/bundle.js' | url }}"></script>
       {%- set translations = {} -%}
       {%- for key in [
         "clipboard.copy",
@@ -204,7 +204,7 @@
           base: "{{ base_url }}",
           features: {{ config.theme.features or [] | tojson }},
           search: Object.assign({
-            worker: "{{ 'assets/javascripts/worker/search.8c7e0a7e.min.js' | url }}"
+            worker: "{{ 'assets/javascripts/worker/search.js' | url }}"
           }, typeof search !== "undefined" && search)
         })
       </script>
