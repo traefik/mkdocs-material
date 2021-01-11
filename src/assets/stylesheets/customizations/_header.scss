@@ -14,12 +14,12 @@
   align-items: center;
   width: 100%;
   height: 64px;
-  color: #06102a;
+  color: #06102A;
   font-size: 10px;
   font-family: Rubik, -apple-system, BlinkMacSystemFont, "Segoe UI",
     "Helvetica Neue", sans-serif;
-  background: #ffffff;
-  border-bottom: 1px solid #e2e2e2;
+  background: #FFFFFF;
+  border-bottom: 1px solid #E2E2E2;
   box-shadow: 0 0 7px 0 #00000021;
   transition: height 100ms;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -46,7 +46,7 @@
     width: 100%;
     margin: 0;
     overflow: hidden;
-    background: #ffffff;
+    background: #FFFFFF;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.09),
       0px 2px 4px 0px rgba(0, 0, 0, 0.09) inset;
 
@@ -87,7 +87,7 @@
 
 .site-header__title {
   a {
-    color: #06102a;
+    color: #06102A;
     font-weight: 500;
     font-size: 22px;
     letter-spacing: 0.02em;
@@ -115,20 +115,20 @@
 
     &:hover {
       .menu-item {
-        color: #1e54d5;
+        color: #1E54D5;
       }
     }
   }
 
   .menu-item {
-    color: #06102a;
+    color: #06102A;
     font-weight: 500;
     font-size: 14.5px;
     line-height: 1em;
     transition: all 50ms;
 
     &:hover {
-      color: #8a959e;
+      color: #8A959E;
     }
   }
 
@@ -207,7 +207,7 @@
 }
 
 .dropdown-submenu {
-  border-right: 1px solid #e3e3e3;
+  border-right: 1px solid #E3E3E3;
 
   &:last-child {
     border-right: none;
@@ -243,7 +243,7 @@
     width: 100%;
     min-height: 79px;
     margin: 0;
-    color: #06102a;
+    color: #06102A;
     border: none;
     transition: all 100ms;
 
@@ -278,11 +278,11 @@
       display: block;
       width: 100%;
       padding: 8px 0 10px 125px;
-      color: #06102a;
+      color: #06102A;
       background: transparent;
 
       &:hover {
-        color: #1e54d5;
+        color: #1E54D5;
       }
     }
 
@@ -310,7 +310,7 @@
     width: 65px;
     height: auto;
     padding: 0;
-    background: #ffffff;
+    background: #FFFFFF;
   }
 
   .dm-item .dmi-details {
@@ -337,7 +337,7 @@
   .dm-item {
     display: block;
     margin-bottom: 15px;
-    color: #06102a;
+    color: #06102A;
     font-weight: 500;
     font-size: 16px;
 
@@ -346,7 +346,7 @@
     }
 
     &:hover {
-      color: #1e54d5;
+      color: #1E54D5;
     }
   }
 }
@@ -377,8 +377,8 @@
   min-height: 280px;
   margin: 12px;
   padding: 28px;
-  color: #ffffff;
-  background: #06102a;
+  color: #FFFFFF;
+  background: #06102A;
   background-image: linear-gradient(to bottom, rgba(10, 24, 63, 0.98), #110325);
   border-radius: 8px;
 
@@ -397,14 +397,14 @@
   min-height: 280px;
   margin: 12px;
   overflow: hidden;
-  background-color: #f0f5ff;
+  background-color: #F0F5FF;
   border-radius: 8px;
 
   &--no-image {
     .nav-menu-card__image {
       height: 100%;
       max-height: 130px;
-      background: #c5d2d9 no-repeat 50%;
+      background: #C5D2D9 no-repeat 50%;
       background-size: cover;
 
       img {
@@ -459,7 +459,7 @@
     height: 162px;
     object-fit: cover;
     vertical-align: middle;
-    background: #d6dbe4 no-repeat 50%;
+    background: #D6DBE4 no-repeat 50%;
   }
 }
 
@@ -475,7 +475,7 @@
 .nav-menu-card__title {
   flex: 1;
   margin: 0 0 16px;
-  color: #06102a;
+  color: #06102A;
   font-weight: 500;
   font-size: 17px;
   line-height: 1.4em;
@@ -495,7 +495,7 @@
 .button--secondary {
   display: inline-block;
   padding: 9px 13px;
-  color: #1e54d5;
+  color: #1E54D5;
   font-weight: 500;
   font-size: 1.3rem;
   font-family: Rubik, -apple-system, BlinkMacSystemFont, "Segoe UI",
@@ -504,18 +504,18 @@
   letter-spacing: 0;
   text-align: center;
   background: transparent;
-  border: 2px solid #1e54d5 !important;
+  border: 2px solid #1E54D5 !important;
   border-radius: 8px;
   outline: none;
   transition: all 200ms;
 }
 .button--secondary:hover {
-  color: #ffffff !important;
-  background: #1e54d5;
+  color: #FFFFFF !important;
+  background: #1E54D5;
 }
 .button--secondary:focus {
-  color: #ffffff !important;
-  background: #1e54d5;
+  color: #FFFFFF !important;
+  background: #1E54D5;
 }
 
 /* Drawer */
