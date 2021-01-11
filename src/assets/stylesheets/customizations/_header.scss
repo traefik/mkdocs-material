@@ -14,12 +14,12 @@
   align-items: center;
   width: 100%;
   height: 64px;
-  color: #06102A;
+  color: #06102a;
   font-size: 10px;
   font-family: Rubik, -apple-system, BlinkMacSystemFont, "Segoe UI",
     "Helvetica Neue", sans-serif;
-  background: #FFFFFF;
-  border-bottom: 1px solid #E2E2E2;
+  background: #ffffff;
+  border-bottom: 1px solid #e2e2e2;
   box-shadow: 0 0 7px 0 #00000021;
   transition: height 100ms;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -46,7 +46,7 @@
     width: 100%;
     margin: 0;
     overflow: hidden;
-    background: #FFFFFF;
+    background: #ffffff;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.09),
       0px 2px 4px 0px rgba(0, 0, 0, 0.09) inset;
 
@@ -87,7 +87,7 @@
 
 .site-header__title {
   a {
-    color: #06102A;
+    color: #06102a;
     font-weight: 500;
     font-size: 22px;
     letter-spacing: 0.02em;
@@ -115,20 +115,20 @@
 
     &:hover {
       .menu-item {
-        color: #1E54D5;
+        color: #1e54d5;
       }
     }
   }
 
   .menu-item {
-    color: #06102A;
+    color: #06102a;
     font-weight: 500;
     font-size: 14.5px;
     line-height: 1em;
     transition: all 50ms;
 
     &:hover {
-      color: #8A959E;
+      color: #8a959e;
     }
   }
 
@@ -207,7 +207,7 @@
 }
 
 .dropdown-submenu {
-  border-right: 1px solid #E3E3E3;
+  border-right: 1px solid #e3e3e3;
 
   &:last-child {
     border-right: none;
@@ -243,7 +243,7 @@
     width: 100%;
     min-height: 79px;
     margin: 0;
-    color: #06102A;
+    color: #06102a;
     border: none;
     transition: all 100ms;
 
@@ -278,11 +278,11 @@
       display: block;
       width: 100%;
       padding: 8px 0 10px 125px;
-      color: #06102A;
+      color: #06102a;
       background: transparent;
 
       &:hover {
-        color: #1E54D5;
+        color: #1e54d5;
       }
     }
 
@@ -310,7 +310,7 @@
     width: 65px;
     height: auto;
     padding: 0;
-    background: #FFFFFF;
+    background: #ffffff;
   }
 
   .dm-item .dmi-details {
@@ -337,7 +337,7 @@
   .dm-item {
     display: block;
     margin-bottom: 15px;
-    color: #06102A;
+    color: #06102a;
     font-weight: 500;
     font-size: 16px;
 
@@ -346,7 +346,7 @@
     }
 
     &:hover {
-      color: #1E54D5;
+      color: #1e54d5;
     }
   }
 }
@@ -377,8 +377,8 @@
   min-height: 280px;
   margin: 12px;
   padding: 28px;
-  color: #FFFFFF;
-  background: #06102A;
+  color: #ffffff;
+  background: #06102a;
   background-image: linear-gradient(to bottom, rgba(10, 24, 63, 0.98), #110325);
   border-radius: 8px;
 
@@ -397,14 +397,14 @@
   min-height: 280px;
   margin: 12px;
   overflow: hidden;
-  background-color: #F0F5FF;
+  background-color: #f0f5ff;
   border-radius: 8px;
 
   &--no-image {
     .nav-menu-card__image {
       height: 100%;
       max-height: 130px;
-      background: #C5D2D9 no-repeat 50%;
+      background: #c5d2d9 no-repeat 50%;
       background-size: cover;
 
       img {
@@ -459,7 +459,7 @@
     height: 162px;
     object-fit: cover;
     vertical-align: middle;
-    background: #D6DBE4 no-repeat 50%;
+    background: #d6dbe4 no-repeat 50%;
   }
 }
 
@@ -475,7 +475,7 @@
 .nav-menu-card__title {
   flex: 1;
   margin: 0 0 16px;
-  color: #06102A;
+  color: #06102a;
   font-weight: 500;
   font-size: 17px;
   line-height: 1.4em;
@@ -495,7 +495,7 @@
 .button--secondary {
   display: inline-block;
   padding: 9px 13px;
-  color: #1E54D5;
+  color: #1e54d5;
   font-weight: 500;
   font-size: 1.3rem;
   font-family: Rubik, -apple-system, BlinkMacSystemFont, "Segoe UI",
@@ -504,18 +504,18 @@
   letter-spacing: 0;
   text-align: center;
   background: transparent;
-  border: 2px solid #1E54D5 !important;
+  border: 2px solid #1e54d5 !important;
   border-radius: 8px;
   outline: none;
   transition: all 200ms;
 }
 .button--secondary:hover {
-  color: #FFFFFF !important;
-  background: #1E54D5;
+  color: #ffffff !important;
+  background: #1e54d5;
 }
 .button--secondary:focus {
-  color: #FFFFFF !important;
-  background: #1E54D5;
+  color: #ffffff !important;
+  background: #1e54d5;
 }
 
 /* Drawer */
@@ -542,5 +542,34 @@
   /* stylelint-disable-next-line selector-class-pattern */
   .site-header .right .site-header__demo-button {
     display: none;
+  }
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.link--with-arrow {
+  display: inline-flex;
+  align-items: center;
+  color: var(--blue);
+  font-weight: 500;
+  font-size: 16px;
+  transition: all 200ms;
+
+  &::after {
+    display: inline-block;
+    width: 23px;
+    height: 23px;
+    margin-top: 1px;
+    margin-left: 6px;
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0wIDBoMjR2MjRIMHoiLz48cGF0aCBmaWxsPSIjMUU1NEQ1IiBkPSJNMTYuNzA3IDcuMjkzbC0xLjQxNCAxLjQxNEwxNy41ODYgMTFIMnYyaDE1LjU4NmwtMi4yOTMgMi4yOTMgMS40MTQgMS40MTNMMjEuNDE0IDEyeiIvPjwvZz48L3N2Zz4=");
+    background-repeat: no-repeat;
+    background-position: 50%;
+    transition: all 50ms;
+    content: " ";
+  }
+
+  &:hover {
+    &::after {
+      margin-left: 8px;
+    }
   }
 }
