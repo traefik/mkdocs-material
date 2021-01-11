@@ -544,3 +544,32 @@
     display: none;
   }
 }
+
+/* stylelint-disable-next-line selector-class-pattern */
+.link--with-arrow {
+  display: inline-flex;
+  align-items: center;
+  color: var(--blue);
+  font-weight: 500;
+  font-size: 16px;
+  transition: all 200ms;
+
+  &::after {
+    display: inline-block;
+    width: 23px;
+    height: 23px;
+    margin-top: 1px;
+    margin-left: 6px;
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0wIDBoMjR2MjRIMHoiLz48cGF0aCBmaWxsPSIjMUU1NEQ1IiBkPSJNMTYuNzA3IDcuMjkzbC0xLjQxNCAxLjQxNEwxNy41ODYgMTFIMnYyaDE1LjU4NmwtMi4yOTMgMi4yOTMgMS40MTQgMS40MTNMMjEuNDE0IDEyeiIvPjwvZz48L3N2Zz4=");
+    background-repeat: no-repeat;
+    background-position: 50%;
+    transition: all 50ms;
+    content: " ";
+  }
+
+  &:hover {
+    &::after {
+      margin-left: 8px;
+    }
+  }
+}

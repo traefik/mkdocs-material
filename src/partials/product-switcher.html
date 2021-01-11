@@ -2,33 +2,33 @@
   <div class="menu-item-wrapper menu-item-wrapper--dropdown">
     <a class="menu-item menu-item--with-icon">
       {% if config.product == "proxy" %}
-        <img
-          src="{{ 'assets/images/logo-traefik-proxy-logo.svg' | url }}"
-          height="48px"
-          width="auto"
-          alt="Traefik Proxy"
-        />
+      <img
+        src="{{ 'assets/images/logo-traefik-proxy-logo.svg' | url }}"
+        height="48px"
+        width="auto"
+        alt="Traefik Proxy"
+      />
       {% elif config.product == "pilot" %}
-        <img
-          src="{{ 'assets/images/logo-traefik-pilot-logo.svg' | url }}"
-          height="48px"
-          width="auto"
-          alt="Traefik Pilot"
-        />
+      <img
+        src="{{ 'assets/images/logo-traefik-pilot-logo.svg' | url }}"
+        height="48px"
+        width="auto"
+        alt="Traefik Pilot"
+      />
       {% elif config.product == "enterprise" %}
-        <img
-          src="{{ 'assets/images/logo-traefik-enterprise-logo.svg' | url }}"
-          height="48px"
-          width="auto"
-          alt="Traefik Enterprise"
-        />
+      <img
+        src="{{ 'assets/images/logo-traefik-enterprise-logo.svg' | url }}"
+        height="48px"
+        width="auto"
+        alt="Traefik Enterprise"
+      />
       {% elif config.product == "mesh" %}
-        <img
-          src="{{ 'assets/images/logo-traefik-mesh-logo.svg' | url }}"
-          height="48px"
-          width="auto"
-          alt="Traefik Mesh"
-        />
+      <img
+        src="{{ 'assets/images/logo-traefik-mesh-logo.svg' | url }}"
+        height="48px"
+        width="auto"
+        alt="Traefik Mesh"
+      />
       {% endif %}
       <span class="icon">
         <svg
@@ -49,71 +49,72 @@
 
     <div class="nav-dropdown-menu nav-dropdown-menu--products">
       <div class="nav-dropdown-menu-wrapper">
-        <div class="dm-header">Product Documentations</div>
+        <div class="dm-header">Product Documentation</div>
         <div class="dm-items">
           {% if config.product != "proxy" %}
-            <div class="dm-item">
-              <div class="dmi-image proxy">
-                <img
-                  src="{{ 'assets/images/product-traefik-proxy.svg' | url }}"
-                  alt="Traefik Proxy Documentation"
-                />
-              </div>
-              <a class="dmi-details" href="https://doc.traefik.io/traefik/">
-                <div class="dmi-title">Traefik Proxy</div>
-                <div class="dmi-description">The cloud-native application proxy</div>
-              </a>
+          <div class="dm-item">
+            <div class="dmi-image proxy">
+              <img
+                src="{{ 'assets/images/traefik-proxy-logo.svg' | url }}"
+                alt="Traefik Proxy Documentation"
+              />
             </div>
-          {% endif %}
-          
-          {% if config.product != "mesh" %}
-            <div class="dm-item">
-              <div class="dmi-image mesh">
-                <img
-                  src="{{ 'assets/images/product-traefik-mesh.svg' | url }}"
-                  alt="Traefik Mesh Documentation"
-                />
+            <a class="dmi-details" href="https://doc.traefik.io/traefik/">
+              <div class="dmi-title">Traefik Proxy</div>
+              <div class="dmi-description">
+                Expose, Secure and Monitor your modern applications
               </div>
-              <a class="dmi-details" href="https://doc.traefik.io/traefik-mesh/">
-                <div class="dmi-title">Traefik Mesh</div>
-                <div class="dmi-description">The simplest service mesh</div>
-              </a>
+            </a>
+          </div>
+          {% endif %} {% if config.product != "mesh" %}
+          <div class="dm-item">
+            <div class="dmi-image mesh">
+              <img
+                src="{{ 'assets/images/traefik-mesh-logo.svg' | url }}"
+                alt="Traefik Mesh Documentation"
+              />
             </div>
-          {% endif %}
-
-          {% if config.product != "enterprise" %}
-            <div class="dm-item dm-item--traefikee">
-              <div class="dmi-image enterprise">
-                <img
-                  src="{{ 'assets/images/product-traefik-enterprise.svg' | url }}"
-                  alt="Traefik Enterprise Documentation"
-                />
+            <a class="dmi-details" href="https://doc.traefik.io/traefik-mesh/">
+              <div class="dmi-title">Traefik Mesh</div>
+              <div class="dmi-description">
+                Route and Monitor communications inside your Kubernetes cluster
               </div>
-              <a
-                class="dmi-details"
-                href="https://doc.traefik.io/traefik-enterprise/"
-              >
-                <div class="dmi-title">Traefik Enterprise</div>
-                <div class="dmi-description">
-                  All-in-one ingress, API management, and service mesh.
-                </div>
-              </a>
+            </a>
+          </div>
+          {% endif %} {% if config.product != "enterprise" %}
+          <div class="dm-item dm-item--traefikee">
+            <div class="dmi-image enterprise">
+              <img
+                src="{{ 'assets/images/traefik-enterprise-logo.svg' | url }}"
+                alt="Traefik Enterprise Documentation"
+              />
             </div>
-          {% endif %}
-
-          {% if config.product != "pilot" %}
-            <div class="dm-item dm-item--pilot">
-              <div class="dmi-image pilot">
-                <img
-                  src="{{ 'assets/images/product-traefik-pilot.svg' | url }}"
-                  alt="Traefik Pilot Documentation"
-                />
+            <a
+              class="dmi-details"
+              href="https://doc.traefik.io/traefik-enterprise/"
+            >
+              <div class="dmi-title">Traefik Enterprise</div>
+              <div class="dmi-description">
+                Ensure high availability, scalability, and security of your
+                microservices
               </div>
-              <a class="dmi-details" href="https://doc.traefik.io/traefik-pilot/">
-                <div class="dmi-title">Traefik Pilot</div>
-                <div class="dmi-description">The Control Center for Traefik</div>
-              </a>
+            </a>
+          </div>
+          {% endif %} {% if config.product != "pilot" %}
+          <div class="dm-item dm-item--pilot">
+            <div class="dmi-image pilot">
+              <img
+                src="{{ 'assets/images/traefik-pilot-logo.svg' | url }}"
+                alt="Traefik Pilot Documentation"
+              />
             </div>
+            <a class="dmi-details" href="https://doc.traefik.io/traefik-pilot/">
+              <div class="dmi-title">Traefik Pilot</div>
+              <div class="dmi-description">
+                Monitor and Manage your Traefik Instances
+              </div>
+            </a>
+          </div>
           {% endif %}
         </div>
       </div>
