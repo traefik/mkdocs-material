@@ -176,4 +176,4 @@ google_analytics:
   - !!python/object/apply:os.getenv ["GOOGLE_ANALYTICS_KEY"]
   - auto
 
-product: 'pilot'
+product: 'enterprise'
