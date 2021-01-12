@@ -49,7 +49,7 @@ $md-toggle__search--checked:
   }
 
   // [tablet landscape +]: Header-embedded search
-  @include break-from-device(tablet landscape) {
+  @include break-from-device(screen small) {
     padding: px2rem(4px) 0;
   }
 
@@ -59,7 +59,7 @@ $md-toggle__search--checked:
     opacity: 0;
 
     // [tablet portrait -]: Full-screen search bar
-    @include break-to-device(tablet portrait) {
+    @include break-to-device(screen small) {
       position: absolute;
       top: px2rem(4px);
       left: px2rem(-44px);
@@ -109,7 +109,7 @@ $md-toggle__search--checked:
     }
 
     // [tablet landscape +]: Overlay for better focus on search
-    @include break-from-device(tablet landscape) {
+    @include break-from-device(screen small) {
       position: fixed;
       top: 0;
       left: 0;
@@ -147,7 +147,7 @@ $md-toggle__search--checked:
     backface-visibility: hidden;
 
     // [tablet portrait -]: Put search modal off-canvas by default
-    @include break-to-device(tablet portrait) {
+    @include break-to-device(tablet landscape) {
       position: fixed;
       top: 0;
       left: 100%;
@@ -189,7 +189,7 @@ $md-toggle__search--checked:
     }
 
     // [tablet landscape +]: Header-embedded search
-    @include break-from-device(tablet landscape) {
+    @include break-from-device(screen small) {
       position: relative;
       float: right;
       width: px2rem(234px);

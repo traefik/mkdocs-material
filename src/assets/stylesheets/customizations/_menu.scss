@@ -105,7 +105,7 @@
   }
 }
 
-@include break-to-device(tablet) {
+@include break-to-device(screen) {
   .md-search__inner {
     top: 64px;
     right: 0;
