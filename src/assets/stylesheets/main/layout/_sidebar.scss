@@ -132,7 +132,6 @@ $md-toggle__drawer--checked:
 
   // Wrapper for scrolling on overflow
   &__scrollwrap {
-    margin: 0 px2rem(4px);
     overflow-y: auto;
     // Hack: reduce jitter
     backface-visibility: hidden;
