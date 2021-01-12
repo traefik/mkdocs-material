@@ -41,7 +41,6 @@
   // List title
   &__title {
     display: block;
-    padding: 0 px2rem(12px);
     overflow: hidden;
     font-weight: 700;
     text-overflow: ellipsis;
@@ -450,7 +449,7 @@
   }
 
   // [tablet portrait -]: Show table of contents in drawer
-  @include break-to-device(tablet portrait) {
+  @include break-to-device(tablet landscape) {
 
     // Show link to table of contents - higher specificity is necessary to
     // display the table of contents inside the drawer
