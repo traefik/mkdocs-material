@@ -39,7 +39,7 @@ with open("README.md", encoding = "utf-8") as data:
 
 # Package description
 setup(
-    name = "mkdocs-traefiklabs",
+    name = package["name"],
     version = package["version"],
     url = "http://traefik.io",
     license = package["license"],
