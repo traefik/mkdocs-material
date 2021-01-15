@@ -101,7 +101,7 @@ export function watchAnchorList(
   /* Compute necessary adjustment for header */
   const adjust$ = header$
     .pipe(
-      map(header => 18 + header.height)
+      map(header => 100 + header.height)
     )
 
   /* Compute partition of previous and next anchors */
@@ -230,6 +230,7 @@ export function applyAnchorList(
 
       /* Look backward */
       prev.forEach(([el], index) => {
+        console.log({el, index, prev}, prev.length)
         setAnchorActive(el, index === prev.length - 1)
         setAnchorBlur(el, true)
       })
