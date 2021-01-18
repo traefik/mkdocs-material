@@ -230,7 +230,6 @@ export function applyAnchorList(
 
       /* Look backward */
       prev.forEach(([el], index) => {
-        console.log({el, index, prev}, prev.length)
         setAnchorActive(el, index === prev.length - 1)
         setAnchorBlur(el, true)
       })
