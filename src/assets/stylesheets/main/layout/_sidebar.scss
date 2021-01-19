@@ -50,12 +50,12 @@ $md-toggle__drawer--checked:
 // Sidebar container
 .md-sidebar {
   position: sticky;
-  top: px2rem(48px);
+  top: 84px;
   z-index: 1;
   align-self: flex-start;
   width: px2rem(242px);
   height: 0;
-  padding: px2rem(24px) 0;
+  padding: 0 0 px2rem(24px);
 
   // Hide for print
   @media print {
