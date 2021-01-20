@@ -529,6 +529,11 @@
       }
     }
 
+    &--secondary {
+      background-color: var(--light-blue) !important;
+      border-radius: 8px;
+    }
+
     // Hide nested navigation by default
     .md-nav__toggle ~ & {
       display: none;
