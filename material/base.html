@@ -39,10 +39,10 @@
       {% endif %}
     {% endblock %}
     {% block styles %}
-      <link rel="stylesheet" href="{{ 'assets/stylesheets/main.71dff81d.min.css' | url }}">
+      <link rel="stylesheet" href="{{ 'assets/stylesheets/main.200aa2c6.min.css' | url }}">
       {% if config.theme.palette %}
         {% set palette = config.theme.palette %}
-        <link rel="stylesheet" href="{{ 'assets/stylesheets/palette.a44cd350.min.css' | url }}">
+        <link rel="stylesheet" href="{{ 'assets/stylesheets/palette.0cee5c6d.min.css' | url }}">
         {% if palette.primary %}
           {% import "partials/palette.html" as map %}
           {% set primary = map.primary(
@@ -71,9 +71,7 @@
       <link rel="stylesheet" href="{{ path | url }}">
     {% endfor %}
     {% block analytics %}
-      {% if config.google_analytics %}
-        {% include "partials/integrations/analytics.html" %}
-      {% endif %}
+      <script>!function(e,t,a,n){e[n]=e[n]||[],e[n].push({"gtm.start":(new Date).getTime(),event:"gtm.js"});var g=t.getElementsByTagName(a)[0],m=t.createElement(a);m.async=!0,m.src="https://www.googletagmanager.com/gtm.js?id=GTM-NMWC63S",g.parentNode.insertBefore(m,g)}(window,document,"script","dataLayer")</script>
     {% endblock %}
     {% block extrahead %}{% endblock %}
   </head>
