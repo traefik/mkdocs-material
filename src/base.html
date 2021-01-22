@@ -253,10 +253,10 @@
             {% if nav %}
               <div class="md-sidebar md-sidebar--primary">
                 {% include "partials/product-switcher.html" %}
-                {% include "partials/search.html" %}
                 {% if "search" in config["plugins"] %}
+                  {% include "partials/search.html" %}
                   <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
-                {% endif %}
+                {% endif %} 
                 <div class="md-sidebar__scrollwrap" data-md-component="navigation">
                   <div class="md-sidebar__inner">
                   {% include "partials/nav.html" %}
