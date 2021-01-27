@@ -70,6 +70,11 @@
   list-style-type: disc;
 }
 
+.md-search {
+  display: flex;
+  justify-content: center;
+}
+
 .md-search__inner {
   float: inherit;
 }
