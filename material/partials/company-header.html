@@ -1,10 +1,13 @@
 {#-
   This file was automatically generated - do not edit
 -#}
+<header class="md-header">
+  {% include "partials/search.html" %}
+</header>
 <div class="site-header-and-placeholder-wrapper">
   <div class="header-placeholder">
   </div>
-  <header class="site-header">
+  <header class="site-header" data-md-component="header">
     <div class="wrapper-1200">
       <div class="left">
         <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer">
@@ -344,7 +347,7 @@
         </nav>
       </div>
       <div class="right">
-        <label class="md-icon md-icon--search md-header-nav__button" for="__search">
+        <label class="md-header-nav__button md-icon--search md-icon" for="__search">
           {% include ".icons/material/magnify.svg" %}
         </label>
         <div class="site-header__demo-button">

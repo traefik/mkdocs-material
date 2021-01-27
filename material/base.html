@@ -39,7 +39,7 @@
       {% endif %}
     {% endblock %}
     {% block styles %}
-      <link rel="stylesheet" href="{{ 'assets/stylesheets/main.71dff81d.min.css' | url }}">
+      <link rel="stylesheet" href="{{ 'assets/stylesheets/main.e7836616.min.css' | url }}">
       {% if config.theme.palette %}
         {% set palette = config.theme.palette %}
         <link rel="stylesheet" href="{{ 'assets/stylesheets/palette.a44cd350.min.css' | url }}">
@@ -104,20 +104,19 @@
     </div>
     {% block header %}
       {% include "partials/company-header.html" %}
-      {% include "partials/header.html" %}
     {% endblock %}
     <div class="md-container" data-md-component="container">
       <main class="md-main" data-md-component="main">
         <div class="md-main__inner md-grid">
           {% block site_nav %}
             {% if nav %}
-              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+              <div class="md-sidebar md-sidebar--primary">
                 {% include "partials/product-switcher.html" %}
-                {% include "partials/search.html" %}
                 {% if "search" in config["plugins"] %}
+                  {% include "partials/search.html" %}
                   <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
-                {% endif %}
-                <div class="md-sidebar__scrollwrap">
+                {% endif %} 
+                <div class="md-sidebar__scrollwrap" data-md-component="navigation">
                   <div class="md-sidebar__inner">
                   {% include "partials/nav.html" %}
                   </div>
@@ -125,7 +124,7 @@
               </div>
             {% endif %}
             {% if page.toc %}
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+              <div class="md-sidebar md-sidebar--secondary">
                 {% if config.repo_url %}
                   <div class="md-flex__cell md-flex__cell--shrink repo_url">
                     <div class="md-header-nav__source">
@@ -133,7 +132,7 @@
                     </div>
                   </div>
                 {% endif %}
-                <div class="md-sidebar__scrollwrap">
+                <div class="md-sidebar__scrollwrap" data-md-component="toc">
                   <div class="md-sidebar__inner">
                     {% include "partials/toc.html" %}
                   </div>
