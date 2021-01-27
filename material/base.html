@@ -26,7 +26,19 @@
       {% elif config.site_author %}
         <meta name="author" content="{{ config.site_author }}">
       {% endif %}
-      <link rel="shortcut icon" href="{{ config.theme.favicon | url }}">
+      {% set favicon_type = config.theme.favicon_type or "image/x-icon" %}
+      {% if config and config.theme and config.theme.favicon %}
+        <link rel="shortcut icon" href="{{ config.theme.favicon | url }}" type="{{ favicon_type }}">
+      {% endif %}
+      {% if config.product == "proxy" %}
+        <link rel="shortcut icon" href="{{ 'assets/images/logo-traefik-proxy-icon.svg' | url }}" type="image/svg+xml">
+      {% elif config.product == "pilot" %}
+        <link rel="shortcut icon" href="{{ 'assets/images/logo-traefik-pilot-icon.svg' | url }}" type="image/svg+xml">
+      {% elif config.product == "enterprise" %}
+        <link rel="shortcut icon" href="{{ 'assets/images/logo-traefik-enterprise-icon.svg' | url }}" type="image/svg+xml">
+      {% elif config.product == "mesh" %}
+        <link rel="shortcut icon" href="{{ 'assets/images/logo-traefik-mesh-icon.svg' | url }}" type="image/svg+xml">
+      {% endif %}
       <meta name="generator" content="mkdocs-{{ mkdocs_version }}, mkdocs-traefiklabs-100.0.8">
     {% endblock %}
     {% block htmltitle %}
