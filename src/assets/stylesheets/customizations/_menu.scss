@@ -36,8 +36,6 @@
 
 .md-sidebar--secondary .md-sidebar__scrollwrap {
   height: initial !important;
-  background-color: var(--light-blue) !important;
-  border-radius: 8px;
 }
 
 .md-sidebar--secondary .md-nav__list {
@@ -72,9 +70,13 @@
   list-style-type: disc;
 }
 
+.md-search {
+  display: flex;
+  justify-content: center;
+}
+
 .md-search__inner {
   float: inherit;
-  width: inherit;
 }
 
 .md-search__input {

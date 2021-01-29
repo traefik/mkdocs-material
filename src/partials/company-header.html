@@ -1,9 +1,21 @@
+<!-- Mitigate bug: https://github.com/mkdocs/mkdocs/issues/2191 -->
+<!-- {% set site_url = config.site_url | default(nav.homepage.url, true) | url %}
+{% if not config.use_directory_urls and site_url[0] == site_url[-1] == "." %}
+  {% set site_url = site_url ~ "/index.html" %}
+{% endif %} -->
+
+<!-- JS somehow initializes the search here, it was previously defined on the header.html file
+  and we don't need it anymore -->
+<header class="md-header">
+  {% include "partials/search.html" %}
+</header>
+
 <div class="site-header-and-placeholder-wrapper">
   <div class="header-placeholder">
     <!-- Do not remove this. It serves an important purpose. -->
   </div>
 
-  <header class="site-header">
+  <header class="site-header" data-md-component="header">
     <div class="wrapper-1200">
       <div class="left">
         <label
@@ -514,12 +526,8 @@
         </nav>
       </div>
 
-      <!-- Demo a -->
       <div class="right">
-        <label
-          class="md-icon md-icon--search md-header-nav__button"
-          for="__search"
-        >
+        <label class="md-header-nav__button md-icon--search md-icon" for="__search">
           {% include ".icons/material/magnify.svg" %}
         </label>
         <div class="site-header__demo-button">

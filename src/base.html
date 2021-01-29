@@ -227,7 +227,6 @@
     <!-- Application header -->
     {% block header %}
       {% include "partials/company-header.html" %}
-      {% include "partials/header.html" %}
     {% endblock %}
 
     <!-- Container, necessary for web-application context -->
@@ -252,13 +251,13 @@
 
             <!-- Main navigation -->
             {% if nav %}
-              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+              <div class="md-sidebar md-sidebar--primary">
                 {% include "partials/product-switcher.html" %}
-                {% include "partials/search.html" %}
                 {% if "search" in config["plugins"] %}
+                  {% include "partials/search.html" %}
                   <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
-                {% endif %}
-                <div class="md-sidebar__scrollwrap">
+                {% endif %} 
+                <div class="md-sidebar__scrollwrap" data-md-component="navigation">
                   <div class="md-sidebar__inner">
                   {% include "partials/nav.html" %}
                   </div>
@@ -268,7 +267,7 @@
 
             <!-- Table of contents -->
             {% if page.toc %}
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+              <div class="md-sidebar md-sidebar--secondary">
                 {% if config.repo_url %}
                   <div class="md-flex__cell md-flex__cell--shrink repo_url">
                     <div class="md-header-nav__source">
@@ -276,7 +275,7 @@
                     </div>
                   </div>
                 {% endif %}
-                <div class="md-sidebar__scrollwrap">
+                <div class="md-sidebar__scrollwrap" data-md-component="toc">
                   <div class="md-sidebar__inner">
                     {% include "partials/toc.html" %}
                   </div>
