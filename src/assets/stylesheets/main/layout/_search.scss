@@ -156,6 +156,7 @@ $md-toggle__search--checked:
       height: 100%;
       transform: translateX(50%);
       opacity: 0;
+      pointer-events: none;
       transition:
         right       0ms 300ms,
         left        0ms 300ms,
@@ -167,6 +168,7 @@ $md-toggle__search--checked:
         left: 0;
         transform: translateX(0);
         opacity: 1;
+        pointer-events: initial;
         transition:
           right       0ms   0ms,
           left        0ms   0ms,
