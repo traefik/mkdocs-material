@@ -39,7 +39,7 @@
       {% elif config.product == "mesh" %}
         <link rel="shortcut icon" href="{{ 'assets/images/logo-traefik-mesh-icon.svg' | url }}" type="image/svg+xml">
       {% endif %}
-      <meta name="generator" content="mkdocs-{{ mkdocs_version }}, mkdocs-traefiklabs-100.0.9">
+      <meta name="generator" content="mkdocs-{{ mkdocs_version }}, mkdocs-traefiklabs-100.0.10">
     {% endblock %}
     {% block htmltitle %}
       {% if page and page.meta and page.meta.title %}
@@ -127,7 +127,7 @@
                 {% if "search" in config["plugins"] %}
                   {% include "partials/search.html" %}
                   <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
-                {% endif %} 
+                {% endif %}
                 <div class="md-sidebar__scrollwrap" data-md-component="navigation">
                   <div class="md-sidebar__inner">
                   {% include "partials/nav.html" %}

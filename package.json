@@ -1,6 +1,6 @@
 {
   "name": "mkdocs-traefiklabs",
-  "version": "100.0.9",
+  "version": "100.0.10",
   "description": "A Traefik Labs branded Material Design theme for MkDocs",
   "keywords": [
     "mkdocs",
