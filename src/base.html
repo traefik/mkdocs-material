@@ -65,8 +65,6 @@
 
       {% if config.product == "proxy" %}
         <link rel="shortcut icon" href="{{ 'assets/images/logo-traefik-proxy-icon.svg' | url }}" type="image/svg+xml" />
-      {% elif config.product == "pilot" %}
-        <link rel="shortcut icon" href="{{ 'assets/images/logo-traefik-pilot-icon.svg' | url }}" type="image/svg+xml" />
       {% elif config.product == "enterprise" %}
         <link rel="shortcut icon" href="{{ 'assets/images/logo-traefik-enterprise-icon.svg' | url }}" type="image/svg+xml" />
       {% elif config.product == "mesh" %}
@@ -174,6 +172,10 @@
 
     <!-- Custom front matter -->
     {% block extrahead %}{% endblock %}
+    <script
+      type="text/javascript"
+      src="https://traefik.github.io/traefiklabs-header-app/main-v1.js"
+    ></script>
   </head>
 
   <!-- Text direction and color palette, if defined -->
@@ -269,7 +271,7 @@
                 {% if "search" in config["plugins"] %}
                   {% include "partials/search.html" %}
                   <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
-                {% endif %} 
+                {% endif %}
                 <div class="md-sidebar__scrollwrap" data-md-component="navigation">
                   <div class="md-sidebar__inner">
                   {% include "partials/nav.html" %}

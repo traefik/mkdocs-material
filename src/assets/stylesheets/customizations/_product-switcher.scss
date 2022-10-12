@@ -33,7 +33,7 @@
     align-items: center;
     justify-content: flex-start;
 
-    & > img { 
+    & > img {
       margin-right: 10px;
     }
   }
@@ -162,10 +162,6 @@
 
     &.enterprise {
       background-color: #0060E0;
-    }
-
-    &.pilot {
-      background-color: #DB7D11;
     }
   }
 }

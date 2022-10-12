@@ -8,13 +8,6 @@
         width="auto"
         alt="Traefik Proxy"
       />
-      {% elif config.product == "pilot" %}
-      <img
-        src="{{ 'assets/images/logo-traefik-pilot-logo.svg' | url }}"
-        height="48px"
-        width="auto"
-        alt="Traefik Pilot"
-      />
       {% elif config.product == "enterprise" %}
       <img
         src="{{ 'assets/images/logo-traefik-enterprise-logo.svg' | url }}"
@@ -96,21 +89,6 @@
               <div class="dmi-title">Traefik Enterprise</div>
               <div class="dmi-description">
                 All-in-one ingress, API management, and service mesh
-              </div>
-            </a>
-          </div>
-          {% endif %} {% if config.product != "pilot" %}
-          <div class="dm-item dm-item--pilot">
-            <div class="dmi-image pilot">
-              <img
-                src="{{ 'assets/images/traefik-pilot-logo.svg' | url }}"
-                alt="Traefik Pilot Documentation"
-              />
-            </div>
-            <a class="dmi-details" href="https://doc.traefik.io/traefik-pilot/">
-              <div class="dmi-title">Traefik Pilot</div>
-              <div class="dmi-description">
-                The Control Center for Traefik
               </div>
             </a>
           </div>
