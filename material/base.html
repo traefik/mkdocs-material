@@ -32,8 +32,6 @@
       {% endif %}
       {% if config.product == "proxy" %}
         <link rel="shortcut icon" href="{{ 'assets/images/logo-traefik-proxy-icon.svg' | url }}" type="image/svg+xml">
-      {% elif config.product == "pilot" %}
-        <link rel="shortcut icon" href="{{ 'assets/images/logo-traefik-pilot-icon.svg' | url }}" type="image/svg+xml">
       {% elif config.product == "enterprise" %}
         <link rel="shortcut icon" href="{{ 'assets/images/logo-traefik-enterprise-icon.svg' | url }}" type="image/svg+xml">
       {% elif config.product == "mesh" %}
@@ -51,7 +49,7 @@
       {% endif %}
     {% endblock %}
     {% block styles %}
-      <link rel="stylesheet" href="{{ 'assets/stylesheets/main.29050b4b.min.css' | url }}">
+      <link rel="stylesheet" href="{{ 'assets/stylesheets/main.d92cc09e.min.css' | url }}">
       {% if config.theme.palette %}
         {% set palette = config.theme.palette %}
         <link rel="stylesheet" href="{{ 'assets/stylesheets/palette.968a41d4.min.css' | url }}">
@@ -86,6 +84,7 @@
       <script>!function(e,t,a,n){e[n]=e[n]||[],e[n].push({"gtm.start":(new Date).getTime(),event:"gtm.js"});var g=t.getElementsByTagName(a)[0],m=t.createElement(a);m.async=!0,m.src="https://www.googletagmanager.com/gtm.js?id=GTM-NMWC63S",g.parentNode.insertBefore(m,g)}(window,document,"script","dataLayer")</script>
     {% endblock %}
     {% block extrahead %}{% endblock %}
+    <script src="https://traefik.github.io/traefiklabs-header-app/main-v1.js"></script>
   </head>
   {% set direction = config.theme.direction or lang.t('direction') %}
   {% if config.theme.palette %}
@@ -127,7 +126,7 @@
                 {% if "search" in config["plugins"] %}
                   {% include "partials/search.html" %}
                   <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
-                {% endif %} 
+                {% endif %}
                 <div class="md-sidebar__scrollwrap" data-md-component="navigation">
                   <div class="md-sidebar__inner">
                   {% include "partials/nav.html" %}
