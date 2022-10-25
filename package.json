@@ -22,6 +22,7 @@
     "lint:scss": "npx stylelint \"src/assets/**/*.scss\"",
     "lint:ts": "npx tslint -p tsconfig.json \"src/**/*.ts\"",
     "start": "npx webpack --mode development --watch",
+    "serve": "mkdocs serve",
     "setup": "python3 setup.py bdist_wheel",
     "deploy": "npm run setup && twine upload dist/*"
   },

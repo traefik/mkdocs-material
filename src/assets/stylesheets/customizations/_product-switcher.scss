@@ -1,7 +1,7 @@
 .product-switcher {
   height: initial !important;
   padding-bottom: 20px;
-  color: #06102A;
+  color: #06102a;
   font-size: 10px;
   font-family: Rubik, -apple-system, BlinkMacSystemFont, "Segoe UI",
     "Helvetica Neue", sans-serif;
@@ -16,7 +16,7 @@
   }
 
   .menu-item {
-    color: #06102A;
+    color: #06102a;
     font-weight: 500;
     font-size: 1.45em;
     line-height: 1em;
@@ -24,7 +24,7 @@
   }
 
   .menu-item:hover {
-    color: #8A959E;
+    color: #8a959e;
   }
 
   /* stylelint-disable-next-line selector-class-pattern */
@@ -77,7 +77,7 @@
     height: auto;
     margin: 8px 0;
     overflow: hidden;
-    background: #FFFFFF;
+    background: #ffffff;
     border-radius: 8px;
     box-shadow: 0 12px 40px 0 rgba(1, 10, 32, 0.24);
   }
@@ -105,7 +105,7 @@
     position: relative;
     width: 100%;
     margin: 0 0 24px;
-    color: #06102A;
+    color: #06102a;
     border: none;
     transition: all 100ms;
   }
@@ -124,7 +124,7 @@
     border-radius: 4px;
 
     & > img {
-      width: 48px
+      width: 48px;
     }
   }
 
@@ -134,11 +134,11 @@
     display: block;
     width: 100%;
     padding: 8px 0 10px 125px;
-    color: #06102A;
+    color: #06102a;
     background: transparent;
   }
   .nav-dropdown-menu--products .dm-item .dmi-details:hover {
-    color: #1E54D5;
+    color: #1e54d5;
   }
   .nav-dropdown-menu--products .dm-item .dmi-title {
     margin: 0 0 2px;
@@ -153,15 +153,19 @@
 
   .dmi-image {
     &.proxy {
-      background-color: #24A1CC;
+      background-color: #24a1cc;
     }
 
     &.mesh {
-      background-color: #9D0FB0;
+      background-color: #9d0fb0;
     }
 
     &.enterprise {
-      background-color: #0060E0;
+      background-color: #0060e0;
+    }
+
+    &.hub {
+      background-color: #7f8c2b;
     }
   }
 }
