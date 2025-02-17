@@ -37,6 +37,9 @@ theme:
   If you use nvm, you can run `nvm use` to set the correct node version to the environment.
 - Check if you have `mkdocs` installed locally (it requires Python).
   You can find installation instructions here: https://www.mkdocs.org/user-guide/installation/
+- You might need to add 2 additional dependencies to be able to run this project locally:
+  - `pip install mkdocs-redirects`
+  - `pip install mkdocs-minify-plugin`
 
 ### Steps:
 
