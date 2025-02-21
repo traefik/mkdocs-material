@@ -201,10 +201,10 @@ label.md-icon.md-icon--menu.md-header-nav__button{
     .md-search__inner {
       top: 10px;
       left: 175px;
+      height: fit-content;
       opacity: 1;
       pointer-events: all;
-      height: fit-content;
-
+     
       .md-search__output {
         display: none;
       }
