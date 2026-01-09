@@ -38,6 +38,7 @@ copyright: Copyright © 2016-2020 Containous; 2020 Traefik Labs
 # Configuration
 theme:
   name: null
+  product: 'enterprise'
   custom_dir: material
 
   # 404 page
@@ -174,5 +175,3 @@ nav:
 google_analytics:
   - !!python/object/apply:os.getenv ["GOOGLE_ANALYTICS_KEY"]
   - auto
-
-product: 'enterprise'
