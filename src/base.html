@@ -63,11 +63,11 @@
         <link rel="shortcut icon" href="{{ config.theme.favicon | url }}" type="{{ favicon_type }}" />
       {% endif %}
 
-      {% if config.product == "proxy" %}
+      {% if config.theme.product == "proxy" %}
         <link rel="shortcut icon" href="{{ 'assets/images/logo-traefik-proxy-icon.svg' | url }}" type="image/svg+xml" />
-      {% elif config.product == "enterprise" %}
+      {% elif config.theme.product == "enterprise" %}
         <link rel="shortcut icon" href="{{ 'assets/images/logo-traefik-enterprise-icon.svg' | url }}" type="image/svg+xml" />
-      {% elif config.product == "mesh" %}
+      {% elif config.theme.product == "mesh" %}
         <link rel="shortcut icon" href="{{ 'assets/images/logo-traefik-mesh-icon.svg' | url }}" type="image/svg+xml" />
       {% endif %}
 
