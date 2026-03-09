@@ -1,0 +1,13 @@
+.st-button {
+  font-family: inherit;
+}
+
+[data-silktide-preferences-link] {
+  display: none;
+  color: var(--md-footer-fg-color--light);
+  font-family: inherit;
+  transition: color 125ms;
+  &:hover {
+    color: var(--md-footer-fg-color);
+  }
+}

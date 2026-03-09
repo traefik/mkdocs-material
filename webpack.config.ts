@@ -203,7 +203,6 @@ export default (_env: never, args: Configuration): Configuration[] => {
         "assets/stylesheets/main":      "src/assets/stylesheets/main.scss",
         "assets/stylesheets/overrides": "src/assets/stylesheets/overrides.scss",
         "assets/stylesheets/palette":   "src/assets/stylesheets/palette.scss",
-        "assets/stylesheets/cookie-banner": "src/assets/stylesheets/cookie-banner.scss"
       },
       output: {
         path: path.resolve(__dirname, "material"),
