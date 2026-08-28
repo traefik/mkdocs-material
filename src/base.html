@@ -71,6 +71,11 @@
         <link rel="shortcut icon" href="{{ 'assets/images/logo-traefik-mesh-icon.svg' | url }}" type="image/svg+xml" />
       {% endif %}
 
+      <!-- Enterprise docs: keep out of search engine indexes sitewide -->
+      {% if config.theme.product == "enterprise" %}
+        <meta name="robots" content="noindex, follow" />
+      {% endif %}
+
       <!-- Generator banner -->
       <meta
         name="generator"

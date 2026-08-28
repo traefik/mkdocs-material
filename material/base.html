@@ -37,6 +37,9 @@
       {% elif config.theme.product == "mesh" %}
         <link rel="shortcut icon" href="{{ 'assets/images/logo-traefik-mesh-icon.svg' | url }}" type="image/svg+xml">
       {% endif %}
+      {% if config.theme.product == "enterprise" %}
+        <meta name="robots" content="noindex, follow">
+      {% endif %}
       <meta name="generator" content="mkdocs-{{ mkdocs_version }}, mkdocs-traefiklabs-100.1.0">
     {% endblock %}
     {% block htmltitle %}
@@ -50,7 +53,7 @@
     {% endblock %}
     {% block styles %}
     <link rel="stylesheet" href="https://traefik.io/silktide-consent-manager/styles.css">
-    <link rel="stylesheet" href="{{ 'assets/stylesheets/main.ec643c8d.min.css' | url }}">
+    <link rel="stylesheet" href="{{ 'assets/stylesheets/main.50abdd16.min.css' | url }}">
       {% if config.theme.palette %}
         {% set palette = config.theme.palette %}
         <link rel="stylesheet" href="{{ 'assets/stylesheets/palette.bd9ced1d.min.css' | url }}">
